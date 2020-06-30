@@ -1,0 +1,51 @@
+<div class="form-group">
+    <label class="form-control-label" for="registration-form-eyecolor">
+        <isprint value="${pdict.preferenceForm.eyecolor.label}" encoding="htmlcontent" />
+    </label>
+    <select class="form-control" id="registration-form-eyecolor" 
+        <isprint value=${pdict.preferenceForm.eyecolor.attributes} encoding="off" />>
+        <isloop items=${pdict.preferenceForm.eyecolor.options} var="eyecolor">
+            <option id="${eyecolor.id}" value="${eyecolor.htmlValue}" 
+            <isif condition="${pdict.preferenceForm.eyecolor.selectedOption == eyecolor.htmlValue}">selected</isif> >${eyecolor.label}</option>
+        </isloop>
+    </select>
+</div>
+
+<div class="form-group">
+    <label class="form-control-label" for="registration-form-haircolor">
+        <isprint value="${pdict.preferenceForm.haircolor.label}" encoding="htmlcontent" />
+    </label>
+    <select class="form-control" id="registration-form-haircolor" 
+        <isprint value=${pdict.preferenceForm.haircolor.attributes} encoding="off" />>
+        <isloop items=${pdict.preferenceForm.haircolor.options} var="haircolor">
+            <option id="${haircolor.id}" value="${haircolor.htmlValue}" 
+            <isif condition="${pdict.preferenceForm.haircolor.selectedOption == haircolor.htmlValue}">selected</isif> >${haircolor.label}</option>
+        </isloop>
+    </select>
+</div>
+
+<div class="form-group">
+    <label class="form-control-label" for="registration-form-skintype">
+        <isprint value="${pdict.preferenceForm.skintype.label}" encoding="htmlcontent" />
+    </label>
+    <select class="form-control" id="registration-form-skintype" 
+        <isprint value=${pdict.preferenceForm.skintype.attributes} encoding="off" />>
+        <isloop items=${pdict.preferenceForm.skintype.options} var="skintype">
+            <option id="${skintype.id}" value="${skintype.htmlValue}" 
+            <isif condition="${pdict.preferenceForm.skintype.selectedOption == skintype.htmlValue}">selected</isif> >${skintype.label}</option>
+        </isloop>
+    </select>
+</div>
+
+<div class="form-group">
+    <label class="form-control-label" for="registration-form-skintone">
+        <isprint value="${pdict.preferenceForm.skintone.label}" encoding="htmlcontent" />
+    </label>
+    <select class="form-control" id="registration-form-skintone" 
+        <isprint value=${pdict.preferenceForm.skintone.attributes} encoding="off" />>
+        <isloop items=${pdict.preferenceForm.skintone.options} var="skintone">
+            <option id="${skintone.id}" value="${skintone.htmlValue}" 
+            <isif condition="${skintone.selectedOption == skintone.htmlValue}">selected</isif> >${skintone.label}</option>
+        </isloop>
+    </select>
+</div>

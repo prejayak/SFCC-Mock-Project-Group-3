@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
+	<field 
+		formid="eyecolor" 
+		label="label.input.eyecolor.profile" 
+		type="string" 
+		mandatory="false">
+		<options>
+			<option optionid=" " label="select.option.skintype.default" value=""/>
+			<option optionid="blue" label="select.option.eyecolor.blue" value="blue"/>
+			<option optionid="black" label="select.option.eyecolor.black" value="black"/>
+			<option optionid="brown" label="select.option.eyecolor.brown" value="brown"/>
+		</options>
+	</field>
+
+	<field 
+		formid="haircolor"
+		label="label.input.haircolor.profile"
+		mandatory="false"
+		type="string">
+		<options>
+			<option optionid=" " label="select.option.skintype.default" value=""/>
+			<option optionid="black" label="select.option.haircolor.black" value="black"/>
+			<option optionid="brown" label="select.option.haircolor.brown" value="brown"/>
+			<option optionid="blonde" label="select.option.haircolor.blonde" value="blonde"/>
+		</options>
+	</field>	 
+
+	<field 
+		formid="skintype"
+		label="label.input.skintype.profile"
+		mandatory="false"
+		type="string">
+		<options>
+			<option optionid=" " label="select.option.skintype.default" value=""/>
+			<option optionid="normal" label="select.option.skintype.normal" value="normal"/>
+			<option optionid="dry" label="select.option.skintype.dry" value="dry"/>
+			<option optionid="oily" label="select.option.skintype.oily" value="oily"/>
+		</options>
+	</field>	 
+
+	<field 
+		formid="skintone"
+		label="label.input.skintone.profile"
+		mandatory="false"
+		type="string">
+		<options>
+			<option optionid=" " label="select.option.skintype.default" value=""/>
+			<option optionid="black" label="select.option.skintone.black" value="black"/>
+			<option optionid="fair" label="select.option.skintone.fair" value="fair"/>
+			<option optionid="brown" label="select.option.skintone.brown" value="brown"/>
+		</options>	
+	</field>	
+
+
+</form>

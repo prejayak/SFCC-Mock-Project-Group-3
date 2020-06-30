@@ -1,0 +1,91 @@
+<isdecorate template="common/layout/page"> 
+
+	<isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addCss('/css/product/detail.css');
+        assets.addJs('/js/preferences.js');
+    </isscript> 
+    
+	<div class="row justify-content-center">
+		<div class="col-sm-6">
+			<div class="card">
+			    <div class="card-header clearfix">
+			        <h2 class="pull-left profile-header">${Resource.msg('label.profile.preferences','preferences',null)}</h2>
+			    </div>
+			    <div class="card-body">
+			    	<form action="${URLUtils.url('Preferences-EditPreferences')}" class="edit-preference-form" method="POST" <isprint value="${pdict.profileForm.attributes}" encoding="off" />>
+			    	
+				         <dl>
+				         	<div class="form-group">
+						        <label class="form-control-label" for="registration-form-eyecolor">
+						            <isprint value="${pdict.preferenceForm.eyecolor.label}" encoding="htmlcontent" />
+						        </label>
+						        <select class="form-control" id="registration-form-eyecolor" 
+						            <isprint value=${pdict.preferenceForm.eyecolor.attributes} encoding="off" />>
+						            <isloop items=${pdict.preferenceForm.eyecolor.options} var="eyecolor">
+						                <option id="${eyecolor.id}" value="${eyecolor.htmlValue}" 
+						                <isif condition="${pdict.preferenceForm.eyecolor.selectedOption == eyecolor.htmlValue}">selected</isif> >${eyecolor.label}</option>
+						            </isloop>
+						        </select>
+						    </div>
+				        </dl>
+	
+				        <dl>
+				         	<div class="form-group">
+						        <label class="form-control-label" for="registration-form-haircolor">
+						            <isprint value="${pdict.preferenceForm.haircolor.label}" encoding="htmlcontent" />
+						        </label>
+						        <select class="form-control" id="registration-form-haircolor" 
+						            <isprint value=${pdict.preferenceForm.haircolor.attributes} encoding="off" />>
+						            <isloop items=${pdict.preferenceForm.haircolor.options} var="haircolor">
+						                <option id="${haircolor.id}" value="${haircolor.htmlValue}" 
+						                <isif condition="${pdict.preferenceForm.haircolor.selectedOption == haircolor.htmlValue}">selected</isif> >${haircolor.label}</option>
+						            </isloop>
+						        </select>
+						    </div>
+				         </dl>
+				         <dl>
+				         	<div class="form-group">
+						        <label class="form-control-label" for="registration-form-skintype">
+						            <isprint value="${pdict.preferenceForm.skintype.label}" encoding="htmlcontent" />
+						        </label>
+						        <select class="form-control" id="registration-form-skintype" 
+						            <isprint value=${pdict.preferenceForm.skintype.attributes} encoding="off" />>
+						            <isloop items=${pdict.preferenceForm.skintype.options} var="skintype">
+						                <option id="${skintype.id}" value="${skintype.htmlValue}" 
+						                <isif condition="${pdict.preferenceForm.skintype.selectedOption == skintype.htmlValue}">selected</isif> >${skintype.label}</option>
+						            </isloop>
+						        </select>
+						    </div>
+				        </dl>
+				         <dl>
+			         	    <div class="form-group">
+						        <label class="form-control-label" for="registration-form-skintone">
+						            <isprint value="${pdict.preferenceForm.skintone.label}" encoding="htmlcontent" />
+						        </label>
+						        <select class="form-control" id="registration-form-skintone" 
+						            <isprint value=${pdict.preferenceForm.skintone.attributes} encoding="off" />>
+						            <isloop items=${pdict.preferenceForm.skintone.options} var="skintone">
+						                <option id="${skintone.id}" value="${skintone.htmlValue}" 
+						                <isif condition="${skintone.selectedOption == skintone.htmlValue}">selected</isif> >${skintone.label}</option>
+						            </isloop>
+						        </select>
+						    </div>
+				        </dl>
+				        <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+				    	 <div class="row">
+					        <div class="col">
+					            <button type="submit" name="save" class="btn btn-save btn-block btn-primary">${Resource.msg('button.save','account',null)}</button>
+					        </div>
+					    </div>
+			    	</form>
+			    </div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+    <div class="col text-center">
+        <a href="${URLUtils.url('Account-Show')}" class="profile-back-to-account-link">${Resource.msg('link.profile.backtomyaccount','account',null)}</a>
+    </div>
+</div>
+</isdecorate>

@@ -1,0 +1,35 @@
+<div class="card">
+    <div class="card-header clearfix">
+        <h2 class="pull-left profile-header">${Resource.msg('label.profile.preferences','preferences',null)}</h2>
+        <isif condition="${!pdict.account.isExternallyAuthenticated}">
+            <a href="${URLUtils.url('Preferences-Profile')}" class="pull-right" aria-label="${Resource.msg('label.profile.edit','account',null)}">${Resource.msg('link.edit','account',null)}</a>
+        </isif>
+    </div>
+    <div class="card-body">
+        <isif condition="${pdict.account.profile.eyeColor}">
+            <dl>
+                <dt>${Resource.msg('label.input.eyecolor.profile','forms',null)}</dt>
+                <dd>${pdict.account.profile.eyeColor}</dd>
+            </dl>
+        </isif>
+        <isif condition="${pdict.account.profile.hairColor}">
+            <dl>
+                <dt>${Resource.msg('label.input.haircolor.profile','forms',null)}</dt>
+                <dd>${pdict.account.profile.hairColor}</dd>
+            </dl>
+        </isif>
+        <isif condition="${pdict.account.profile.skinType}">
+            <dl>
+                <dt>${Resource.msg('label.input.skintype.profile','forms',null)}</dt>
+                <dd>${pdict.account.profile.skinType}</dd>
+            </dl>
+        </isif>
+        <isif condition="${pdict.account.profile.skinTone}">
+            <dl>
+                <dt>${Resource.msg('label.input.skintone.profile','forms',null)}</dt>
+                <dd>${pdict.account.profile.skinTone}</dd>
+            </dl>
+        </isif>
+
+    </div>
+</div>
