@@ -67,7 +67,7 @@
 						            <isprint value=${pdict.preferenceForm.skintone.attributes} encoding="off" />>
 						            <isloop items=${pdict.preferenceForm.skintone.options} var="skintone">
 						                <option id="${skintone.id}" value="${skintone.htmlValue}" 
-						                <isif condition="${skintone.selectedOption == skintone.htmlValue}">selected</isif> >${skintone.label}</option>
+						                <isif condition="${pdict.preferenceForm.skintone.selectedOption == skintone.htmlValue}">selected</isif> >${skintone.label}</option>
 						            </isloop>
 						        </select>
 						    </div>

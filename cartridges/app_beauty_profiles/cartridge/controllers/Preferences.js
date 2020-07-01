@@ -52,8 +52,12 @@ server.get('Profile',
 
     var preferenceForm = server.forms.getForm('preferences');
     preferenceForm.clear();
-    
-    
+    var CustomerMgr = require('dw/customer/CustomerMgr');
+    var customer = CustomerMgr.getCustomerByLogin(req.currentCustomer.profile.email);
+    preferenceForm.eyecolor.selectedOption = customer.profile.custom.eyeColor;
+    preferenceForm.haircolor.selectedOption = customer.profile.custom.hairColor;
+    preferenceForm.skintone.selectedOption = customer.profile.custom.skinTone;
+    preferenceForm.skintype.selectedOption = customer.profile.custom.skinType;
     res.render('account/preferencesProfileForm',{
     	preferenceForm : preferenceForm
     });
