@@ -1,0 +1,12 @@
+@import "~base/components/header";
+
+.header-banner {
+
+    a.promo {
+        color: $white;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+}
