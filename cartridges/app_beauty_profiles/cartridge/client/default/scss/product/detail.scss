@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+@import "~base/product/detail";
+
+.promotions {
+    font-weight: normal;
+    text-align: center;
+    height: 85%;
+
+    div.collapsible-xl{
+        button.callout {
+            font-size: 1em;
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            color: $black;
+            font-weight: 500;
+    
+            @include media-breakpoint-up(sm) {
+                font-size: 1em;
+            }
+    
+            &::after {
+                color: $black;
+            }
+        }
+
+    } 
+}
